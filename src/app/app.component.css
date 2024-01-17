@@ -1,0 +1,64 @@
+header {
+  background-image: url("../assets/bg-cafe.jpg");
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 40px 100px 130px 100px;
+  display: flex;
+  height: 15rem;
+  align-items: center;
+  justify-content: center;
+}
+main {
+  height: 100%;
+  background-color: #111315;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  position: relative;
+  order: 1;
+  bottom: 100px;
+  padding: 0px;
+  background-color: #1b1d1f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
+  border-radius: 10px;
+  width: 80%;
+}
+.container h1 {
+  font-size: 2rem;
+  color: #fef7ee;
+}
+.container-header p {
+  text-wrap: pretty;
+  text-align: center;
+  color: #6f757c;
+}
+.container-header {
+  width: 53%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.filters-container {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 5rem 2rem;
+  }
+  .container-header {
+    width: 100%;
+  }
+}
