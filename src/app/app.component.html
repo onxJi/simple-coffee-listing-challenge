@@ -3,16 +3,24 @@
 </header>
 <main>
   <div class="container">
+
     <div class="container-header">
+      <img src="../assets/vector.svg" alt="">
       <h1>Our Collection</h1>
       <p>Introducing our Coffee Collection, a selection of unique coffees from different roast types and origins,
         expertly
         roasted in small batches and shipped fresh weekly.</p>
       <div class="filters-container">
-        <button>All Products</button>
-        <button>Available Now</button>
+        <button class="button" [class.selected]="selected1" (click)="selectButton('AllProducts')">All Products</button>
+        <button class="button" [class.selected]="selected2" (click)="selectButton('AvailableNow')">Available
+          Now</button>
       </div>
-    </div>
 
+    </div>
+    <div class="container-body-parent">
+      @for (item of cards; track $index) {
+      <app-card [card]="item"></app-card>
+      }
+    </div>
   </div>
 </main>

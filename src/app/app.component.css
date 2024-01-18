@@ -30,15 +30,19 @@ main {
   padding: 5rem;
   border-radius: 10px;
   width: 80%;
+  z-index: 10;
+  overflow: hidden;
 }
 .container h1 {
   font-size: 2rem;
   color: #fef7ee;
+  z-index: 10;
 }
 .container-header p {
   text-wrap: pretty;
   text-align: center;
   color: #6f757c;
+  z-index: 10;
 }
 .container-header {
   width: 53%;
@@ -47,11 +51,46 @@ main {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  position: relative;
+}
+
+.container-header img {
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+  z-index: -1;
 }
 
 .filters-container {
   display: flex;
   gap: 1rem;
+}
+.filters-container .button {
+  background-color: transparent;
+  color: #fef7ee;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 0.75em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.filters-container .button:hover {
+  background-color: #6f757c;
+  color: #fef7ee;
+}
+.filters-container .selected {
+  background-color: #6f757c;
+  color: #fef7ee;
+}
+
+.container-body-parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  place-items: center;
+  margin-top: 2rem;
 }
 
 @media (max-width: 768px) {
@@ -60,5 +99,12 @@ main {
   }
   .container-header {
     width: 100%;
+  }
+  .container-header img {
+    bottom: 54%;
+    left: 50%;
+  }
+  .container-body-parent {
+    grid-template-columns: repeat(1, 1fr);
   }
 }

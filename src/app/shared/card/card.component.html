@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="container-header">
+        @if (card.popular) {
+        <span>Popular</span>
+        }
+        <img src="{{card.image}}" alt="card image">
+    </div>
+    <div class="container-body">
+        <p>{{card.name}}</p>
+        <span>{{card.price}}</span>
+    </div>
+    <div class="container-footer">
+        @if (card.rating !== null) {
+        <img src="../../../assets/Star_fill.svg" alt="rating">
+        <p class="rating">{{card.rating | number : '1.1-2'}}</p>
+        <span class="votes">({{card.votes }} votes)</span>
+        }@else {
+        <img src="../../../assets/Star.svg" alt="rating">
+        <p class="no-rating">No rating</p>
+        }
+        @if (card.available == false) {
+        <span class="vencido">Sold out</span>
+        }
+    </div>
+</div>
