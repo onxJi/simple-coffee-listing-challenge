@@ -11,11 +11,11 @@
     </div>
     <div class="container-footer">
         @if (card.rating !== null) {
-        <img src="../../../assets/Star_fill.svg" alt="rating">
+        <img src="./assets/Star_fill.svg" alt="rating">
         <p class="rating">{{card.rating | number : '1.1-2'}}</p>
         <span class="votes">({{card.votes }} votes)</span>
         }@else {
-        <img src="../../../assets/Star.svg" alt="rating">
+        <img src="./assets/Star.svg" alt="rating">
         <p class="no-rating">No rating</p>
         }
         @if (card.available == false) {
